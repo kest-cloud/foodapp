@@ -247,10 +247,22 @@ class PopularFoodTitle extends StatelessWidget {
                 color: Color(0xFF3a3a3b),
                 fontWeight: FontWeight.w300),
           ),
-          Text(
-            "See all",
-            style: TextStyle(
-                fontSize: 16, color: Colors.blue, fontWeight: FontWeight.w100),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, ScaleRoute(page: FoodDetailsPage()));
+            },
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context, ScaleRoute(page: FoodDetailsPage()));
+              },
+              child: Text(
+                "See all",
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.deepOrange,
+                    fontWeight: FontWeight.w100),
+              ),
+            ),
           )
         ],
       ),
@@ -331,5 +343,3 @@ class PopularFoodItems extends StatelessWidget {
     );
   }
 }
-
-

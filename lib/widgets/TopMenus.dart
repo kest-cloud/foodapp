@@ -13,14 +13,15 @@ class _TopMenusState extends State<TopMenus> {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          TopMenuTiles(name: "Burger", imageUrl: "ic_burger", slug: ""),
-          TopMenuTiles(name: "Sushi", imageUrl: "ic_sushi", slug: ""),
-          TopMenuTiles(name: "Pizza", imageUrl: "ic_pizza", slug: ""),
-          TopMenuTiles(name: "Cake", imageUrl: "ic_cake", slug: ""),
           TopMenuTiles(name: "Ice Cream", imageUrl: "ic_ice_cream", slug: ""),
+          TopMenuTiles(name: "Cake", imageUrl: "ic_cake", slug: ""),
+          TopMenuTiles(name: "Pizza", imageUrl: "ic_pizza", slug: ""),
           TopMenuTiles(name: "Soft Drink", imageUrl: "ic_soft_drink", slug: ""),
           TopMenuTiles(name: "Burger", imageUrl: "ic_burger", slug: ""),
           TopMenuTiles(name: "Sushi", imageUrl: "ic_sushi", slug: ""),
+          TopMenuTiles(name: "Ice Cream", imageUrl: "ic_ice_cream", slug: ""),
+          TopMenuTiles(name: "Cake", imageUrl: "ic_cake", slug: ""),
+          TopMenuTiles(name: "Pizza", imageUrl: "ic_pizza", slug: ""),
         ],
       ),
     );
@@ -42,18 +43,20 @@ class TopMenuTiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        print('clicked');
+      },
       child: Column(
         children: <Widget>[
           Container(
             padding: EdgeInsets.only(left: 10, right: 5, top: 5, bottom: 5),
-            decoration: new BoxDecoration(boxShadow: [
-              new BoxShadow(
-                color: Color(0xFFfae3e2),
-                blurRadius: 25.0,
-                offset: Offset(0.0, 0.75),
-              ),
-            ]),
+            // decoration: new BoxDecoration(boxShadow: [
+            //   new BoxShadow(
+            //     color: Color(0xFFfae3e2),
+            //     blurRadius: 25.0,
+            //     offset: Offset(0.0, 0.75),
+            //   ),
+            // ]),
             child: Card(
                 color: Colors.white,
                 elevation: 0,
@@ -63,7 +66,7 @@ class TopMenuTiles extends StatelessWidget {
                   ),
                 ),
                 child: Container(
-                  width: 50,
+                  width: 80,
                   height: 50,
                   child: Center(
                       child: Image.asset(

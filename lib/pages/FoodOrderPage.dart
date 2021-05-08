@@ -59,7 +59,7 @@ class _FoodOrderPageState extends State<FoodOrderPage> {
                 ),
                 CartItem(
                     productName: "Grilled Salmon",
-                    productPrice: "\$96.00",
+                    productPrice: "\#96.00",
                     productImage: "ic_popular_food_1",
                     productCartQuantity: "2"),
                 SizedBox(
@@ -67,7 +67,7 @@ class _FoodOrderPageState extends State<FoodOrderPage> {
                 ),
                 CartItem(
                     productName: "Meat vegetable",
-                    productPrice: "\$65.08",
+                    productPrice: "\#65.08",
                     productImage: "ic_popular_food_4",
                     productCartQuantity: "5"),
                 SizedBox(
@@ -198,7 +198,7 @@ class TotalCalculationWidget extends StatelessWidget {
                     textAlign: TextAlign.left,
                   ),
                   Text(
-                    "\$192",
+                    "\#192",
                     style: TextStyle(
                         fontSize: 18,
                         color: Color(0xFF3a3a3b),
@@ -222,7 +222,7 @@ class TotalCalculationWidget extends StatelessWidget {
                     textAlign: TextAlign.left,
                   ),
                   Text(
-                    "\$102",
+                    "\#102",
                     style: TextStyle(
                         fontSize: 18,
                         color: Color(0xFF3a3a3b),
@@ -246,7 +246,7 @@ class TotalCalculationWidget extends StatelessWidget {
                     textAlign: TextAlign.left,
                   ),
                   Text(
-                    "\$292",
+                    "\#292",
                     style: TextStyle(
                         fontSize: 18,
                         color: Color(0xFF3a3a3b),
@@ -501,7 +501,9 @@ class AddToCartMenu extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              print('Hello Ade');
+            },
             icon: Icon(Icons.add),
             color: Color(0xFFfd2c2c),
             iconSize: 18,

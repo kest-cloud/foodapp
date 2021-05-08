@@ -8,7 +8,11 @@ import 'package:flutter_app/pages/splash.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Roboto', hintColor: Color(0xFFd0cece)),
+      theme: ThemeData(
+        fontFamily: 'Roboto',
+        hintColor: Color(0xFFd0cece),
+        //scaffoldBackgroundColor: Colors.orange[500],
+      ),
       home: HomePage(),
       //home: Splash(),
     ));
